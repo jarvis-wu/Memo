@@ -10,27 +10,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
 	
-	@IBOutlet weak var titleTextField: UITextField!
+	@IBOutlet weak private var titleTextField: UITextField!
 	
-	@IBOutlet weak var notesTextField: UITextField!
+	@IBOutlet weak private var notesTextField: UITextField!
+	
+	private var userDefaults: UserDefaults = UserDefaults.standard
+	
+	private var newMemo: Memo = Memo()
 	
 	var toDoData: NSDictionary = NSDictionary()
 	
-	@IBAction func deleteItem(_ sender: Any) {
-		let userDefaults: UserDefaults = UserDefaults.standard
-		let itemListArray: NSMutableArray = userDefaults.object(forKey: "itemList") as! NSMutableArray
-		let mutableItemList: NSMutableArray = NSMutableArray()
-		
-		for dict in itemListArray {
-			mutableItemList.add(dict as! NSDictionary)
-		}
-		
-		mutableItemList.remove(toDoData)
-		
-		userDefaults.removeObject(forKey: "itemList")
-		userDefaults.set(mutableItemList, forKey: "itemList")
-		
-		userDefaults.synchronize()
+	@IBAction private func deleteItem(_ sender: AnyObject) {
+		newMemo.userDefaults = userDefaults
+		newMemo.dataSet.setObject(titleTextField.text!, forKey: "itemTitle" as NSCopying)
+		newMemo.dataSet.setObject(notesTextField.text!, forKey: "itemNote" as NSCopying)
+		newMemo.itemList = userDefaults.object(forKey: "itemList") as? NSMutableArray
+		newMemo.delete()
+		// Dismiss the current VC from navigation stack. No segue needed.
 		self.navigationController?.popViewController(animated: true)
 	}
 
@@ -38,25 +34,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 		titleTextField.isUserInteractionEnabled = false
 		notesTextField.isUserInteractionEnabled = false
-		
 		titleTextField.text = toDoData.object(forKey: "itemTitle") as? String
 		notesTextField.text = toDoData.object(forKey: "itemNote") as? String
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

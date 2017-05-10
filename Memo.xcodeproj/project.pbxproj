@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2156A551EC3663900350E78 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2156A541EC3663900350E78 /* Memo.swift */; };
 		B21624561EC218F7005AFE44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21624551EC218F7005AFE44 /* AppDelegate.swift */; };
 		B216245B1EC218F7005AFE44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21624591EC218F7005AFE44 /* Main.storyboard */; };
 		B216245D1EC218F7005AFE44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B216245C1EC218F7005AFE44 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2156A541EC3663900350E78 /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		B21624521EC218F7005AFE44 /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21624551EC218F7005AFE44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B216245A1EC218F7005AFE44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				B21624671EC21EC2005AFE44 /* MasterTableViewController.swift */,
 				B21624691EC21F2D005AFE44 /* AddViewController.swift */,
 				B216246B1EC21F6A005AFE44 /* DetailViewController.swift */,
+				B2156A541EC3663900350E78 /* Memo.swift */,
 				B216245C1EC218F7005AFE44 /* Assets.xcassets */,
 				B216245E1EC218F7005AFE44 /* LaunchScreen.storyboard */,
 				B21624611EC218F7005AFE44 /* Info.plist */,
@@ -102,7 +105,7 @@
 				TargetAttributes = {
 					B21624511EC218F7005AFE44 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = RFP4WMVF26;
+						DevelopmentTeam = W329T93473;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -147,6 +150,7 @@
 				B21624681EC21EC2005AFE44 /* MasterTableViewController.swift in Sources */,
 				B216246A1EC21F2D005AFE44 /* AddViewController.swift in Sources */,
 				B216246C1EC21F6A005AFE44 /* DetailViewController.swift in Sources */,
+				B2156A551EC3663900350E78 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = RFP4WMVF26;
+				DEVELOPMENT_TEAM = W329T93473;
 				INFOPLIST_FILE = Memo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,7 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = RFP4WMVF26;
+				DEVELOPMENT_TEAM = W329T93473;
 				INFOPLIST_FILE = Memo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
